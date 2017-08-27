@@ -1,0 +1,55 @@
+agm-map {
+    height: 500px;
+  }
+
+  input[type=checkbox]
+  {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(2); /* IE */
+    -moz-transform: scale(2); /* FF */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    padding: 10px;
+    margin-top:15px;
+    margin-left:15px;
+    position: absolute;
+  }
+  .checkboxtext
+  {
+    /* Checkbox text */
+    font-size: 110%;
+    margin-left:5px;
+    margin-top:10px;
+    display: inline;
+  }
+
+  .sebm-google-map-container { 
+    height: 600px;width:700px;
+  }
+  #propContainer {background-color:lightblue;width:400px;font-size:12px;float:left}
+  
+  .nice-input {
+  clear :both;
+  width:50px;
+  margin:2px;
+
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+padding: 5px 5px;
+border: 1px solid #b7b7b7;
+-webkit-border-radius: 14px / 23px;
+border-radius: 14px / 23px;
+font: normal 12px/normal "Times New Roman", Times, serif;
+color: rgba(0,142,198,1);
+-o-text-overflow: clip;
+text-overflow: clip;
+background: rgba(252,252,252,1);
+-webkit-box-shadow: 4px 4px 6px 1px rgba(0,0,0,0.4) , 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+box-shadow: 4px 4px 6px 1px rgba(0,0,0,0.4) , 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+-webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1), all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+-moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1), all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+-o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1), all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1), all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}

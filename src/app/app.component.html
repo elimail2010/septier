@@ -1,3 +1,40 @@
-<h1>
-  {{title}}
-</h1>
+<h3>{{ title }}</h3>
+<div id= "propContainer" >
+     Distance:  <input type="number"  name="distance-{{i}}" id="distance-{{i}}" [(ngModel)] = "gDistance">
+     Size:  <input type="number"  name="size-{{i}}" id="size-{{i}}" [(ngModel)] = "gSize">
+    <DIV id="prop"  *ngFor="let m of markers; let i = index">
+      <span style="width:20px;background-color:lightskyblue;display:inline-block">  [{{i+1}}] </span>
+     lat: <input class="nice-input" type="number" name="lat-{{i}}" id="lat-{{i}}"  [(ngModel)]="m.lat"  >
+     lng: <input class="nice-input" type="number" name="lng-{{i}}" id="lng-{{i}}"  [(ngModel)]="m.lng">
+     distance:<input class="nice-input" type="number"  name="dis-{{i}}" id="dis-{{i}}"  [(ngModel)]="m.distance" >
+     <span class="checkboxtext">
+            show
+          </span>
+     <input type="checkbox" checked="true" name="visible-{{i}}" id="visible-{{i}}" [(ngModel)] = "m.visible" >
+     
+          
+      </DIV>
+  </div>
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng"
+(mapReady)="mapReady($event)" (mapClick)="mapClicked($event)">
+<agm-marker [latitude]="lat" [longitude]="lng" ></agm-marker>
+<agm-circle 
+*ngFor="let m of markers; let i = index"
+[latitude]="m.lat " [longitude]="m.lng" 
+    [radius]="m.distance"
+    [fillColor]="'yellow'"
+    [visible] = m.visible
+    [circleDraggable]="false"
+    [strokeColor]="m.strokeColor"
+    [strokeOpacity] ="0.8"
+    [strokeWeight] ="m.strokeWeight"
+    [fillOpacity]= "0.1"
+      [editable]="false" 
+      [clickable]="true"
+    (circleClick) ="clicked(m,i)"    
+></agm-circle>
+  
+</agm-map>

@@ -1,20 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ApplicationRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-
 import { AppComponent } from './app.component';
 
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
-    HttpModule
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCrQniMuHNW7BSEiQWhhcRpIHOoV5r0b2g'
+    })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  declarations: [ AppComponent ],
+  bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+
+
+ 
+
+}
